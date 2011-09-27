@@ -6,3 +6,5 @@
 *.db
 build/*
 dist/*
+.idea/
+*.sqlite3

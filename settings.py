@@ -95,12 +95,12 @@ TEMPLATE_LOADERS = (
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+#    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
 )
 
-ROOT_URLCONF = 'staticfd.urls'
+ROOT_URLCONF = 'urls'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
@@ -119,7 +119,8 @@ INSTALLED_APPS = (
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
-    'fd'
+    'fd',
+    'formtranslate',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -144,3 +145,15 @@ LOGGING = {
         },
     }
 }
+
+
+# import local settings if we find them
+try:
+    #try to see if there's an environmental variable set for local_settings
+    import sys, os
+    if os.environ.has_key('LOCALSETTINGS'):
+        localpath = os.path.dirname(os.environ['LOCALSETTINGS'])
+        sys.path.insert(0, localpath)
+    from localsettings import *
+except ImportError:
+    pass

@@ -10,5 +10,15 @@ except ImportError:
 
 import settings
 
+import sys, os
+
+filedir = os.path.dirname(__file__)
+sys.path.append(os.path.join(filedir))
+sys.path.append(os.path.join(filedir,'formtranslate'))
+
+
 if __name__ == "__main__":
     execute_manager(settings)
+
+
+    

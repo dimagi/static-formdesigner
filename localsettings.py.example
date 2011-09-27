@@ -1,0 +1,23 @@
+# example localsettings file
+
+# you should configure your database here before doing any real work.
+# see: http://docs.djangoproject.com/en/dev/ref/settings/#databases
+
+# for postgresql:
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "NAME": "staticformdesigner.sqlite3",
+        "USER": "",
+        "PASSWORD": "",
+        "HOST": "",
+    }
+}
+
+
+DJANGO_LOG_FILE = "staticfd.django.log"
+LOG_SIZE = 1000000
+LOG_LEVEL   = "DEBUG"
+LOG_FILE    = "staticfd.router.log"
+LOG_FORMAT  = "%(asctime)s - [%(levelname)s]\t[%(name)s]: %(message)s"
+LOG_BACKUPS = 256 # number of logs to keep
