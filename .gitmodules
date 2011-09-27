@@ -3,4 +3,4 @@
 	url = git://github.com/dimagi/FormDesignerAlpha.git
 [submodule "formtranslate"]
 	path = formtranslate
-	url = git@github.com:dimagi/formtranslate.git
+	url = git://github.com/dimagi/formtranslate.git
