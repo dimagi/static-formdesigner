@@ -1,6 +1,6 @@
 [submodule "fd/static/fdalpha"]
 	path = fd/static/fdalpha
-	url = git://github.com/dimagi/FormDesignerAlpha.git
+	url = git://github.com/dimagi/Vellum.git
 [submodule "formtranslate"]
 	path = formtranslate
 	url = git://github.com/dimagi/formtranslate.git
