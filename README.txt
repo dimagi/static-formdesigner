@@ -12,8 +12,7 @@ Copy localsettings.py.example to localsettings.py and edit accordingly
 
 
 After doing:
-git submodule init
-git submodule update
+git submodule update --init --recursive
 ./manage.py syncdb
 ./manage.py runserver
 
